@@ -13,6 +13,6 @@
 elm reactor
 ```
 
-- Open `localhost:8000`
+- Open `localhost:8000` in your browser
 - Click `src`
 - Click `Main.elm`
