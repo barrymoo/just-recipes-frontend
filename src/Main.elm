@@ -68,9 +68,8 @@ viewInput t p idx v =
 
 viewValidation : Model -> Html msg
 viewValidation model =
-  if Array.map (\(_, v) -> String.isEmpty v |> not) model.ingredients
-     |> Array.toList
-     |> List.all identity
+  if Array.toList model.ingredients
+     |> List.all (Tuple.second >> String.isEmpty >> not)
   then
     div [ style "color" "green" ] [ text "Nice recipe!"]
   else
